@@ -9,6 +9,10 @@ FROM ubuntu:20.04
 ARG QEMU_VERSION=7.0.0
 ARG HOME=/root
 
+### 更改 Ubuntu 镜像源
+# Replace the default sources.list with one from Alibaba Cloud
+RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+
 # 0. Install general tools
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
