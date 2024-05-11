@@ -135,6 +135,8 @@ impl TaskManager {
             panic!("All applications completed!");
         }
     }
+
+    
 }
 
 /// Run the first task in task list.
